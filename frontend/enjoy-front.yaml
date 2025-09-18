@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: enjoy-front-container
-          image: 868422696413.dkr.ecr.ap-northeast-2.amazonaws.com/test:
+          image: 868422696413.dkr.ecr.ap-northeast-2.amazonaws.com/test:20250918-064554
           ports:
             - containerPort: 80
               #          volumeMounts:
