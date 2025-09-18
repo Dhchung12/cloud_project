@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: enjoy-front-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enjoy-front
+  template:
+    metadata:
+      name: enjoy-front-pod
+      labels:
+        app: enjoy-front
+    spec:
+      containers:
+        - name: enjoy-front-container
+          image: blank98/enjoy-front:1.1
+          ports:
+            - containerPort: 80
+              #          volumeMounts:
+              #            - name: nginx-config
+              #              mountPath: /etc/nginx/conf.d
+              #              readOnly: true
+              #      volumes:
+              #        - name: nginx-config
+              #          configMap:
+              #            name: nginx-config
